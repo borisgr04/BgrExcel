@@ -1,4 +1,4 @@
-using Bgr.Base.Contracts;
+using Bgr.Base.Excel.Contracts;
 using Bgr.Base.Excel;
 using NUnit.Framework;
 using System;
@@ -18,11 +18,12 @@ namespace Tests
             exportarExcel.Log = TestContext.WriteLine;
             var paises = new List<Pais> { new Pais { Id = 1, Name = "Colombia" }, new Pais { Id = 2, Name = "Uruguay" } };
 
-            
+           
             exportarExcel.AddData(paises, "Paises");
             exportarExcel.ExportFile(ObtenerPath("Datos.xlsx"));
             var bytes = exportarExcel.ExportBytes();
             var stream = exportarExcel.Export();
+            Assert.NotNull(bytes);
             Assert.NotNull(stream);
         }
         [Test]
@@ -40,6 +41,7 @@ namespace Tests
             {
                 IExportExcel exportarExcel = new ExportExcel();
                 var stream = exportarExcel.Export();
+                Assert.NotNull(stream);
             }
             catch (NoDataFoundException ex)
             {

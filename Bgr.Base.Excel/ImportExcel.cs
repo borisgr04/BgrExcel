@@ -1,4 +1,4 @@
-﻿using Bgr.Base.Contracts;
+﻿using Bgr.Base.Excel.Contracts;
 using ExcelDataReader;
 using System;
 using System.Collections.Generic;
@@ -26,16 +26,7 @@ namespace Bgr.Base.Excel
                 //  - OpenXml Excel files (2007 format; *.xlsx)
                 using (var reader = ExcelReaderFactory.CreateReader(stream))
                 {
-
-                    var result = reader.AsDataSet(new ExcelDataSetConfiguration()
-                    {
-                        ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
-                        {
-                            UseHeaderRow = true
-                        }
-                    });
-
-                    return result.Tables[0];
+                    return ExportToDataTable(reader);
                 }
             }
         }
@@ -43,17 +34,23 @@ namespace Bgr.Base.Excel
         {
             using (var reader = ExcelReaderFactory.CreateReader(file))
             {
-                var result = reader.AsDataSet(new ExcelDataSetConfiguration()
-                {
-                    ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
-                    {
-                        UseHeaderRow = true
-                    }
-                });
-                return result.Tables[0];
+                return ExportToDataTable(reader);
             }
 
         }
+
+        private  DataTable ExportToDataTable(IExcelDataReader reader)
+        {
+            _dataSet = reader.AsDataSet(new ExcelDataSetConfiguration()
+            {
+                ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
+                {
+                    UseHeaderRow = true
+                }
+            });
+            return _dataSet.Tables[0];
+        }
+
         /// <summary>
         /// Sheet number starts at 0
         /// </summary>

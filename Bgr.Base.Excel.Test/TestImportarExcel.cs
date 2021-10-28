@@ -1,4 +1,4 @@
-﻿using Bgr.Base.Contracts;
+﻿using Bgr.Base.Excel.Contracts;
 using Bgr.Base.Excel;
 using NUnit.Framework;
 using System;
@@ -32,29 +32,8 @@ namespace Tests
 
         }
 
-        //[Test]
-        //public void ImportarSinHeaderToList()
-        //{
-        //    IImportExcel importar = new ImportExcel();
-        //    importar.Import(ObtenerPath("Test.xlsx"),false);
-        //    var data = importar.GetSheet(0);
-        //    Console.WriteLine(data.Rows.Count);
-        //    Assert.AreEqual(2678, data.Rows.Count);
-        //}
-
         [Test]
         public void ImportarSinHeaderToListMap()
-        {
-            IImportExcel importar = new ImportExcel();
-            importar.Import(ObtenerPath("Test.xlsx"));
-            var data = importar.GetSheet(0, Mapper);
-            Console.WriteLine(data.Count);
-            Assert.AreEqual(2677, data.Count);
-        }
-
-
-        [Test]
-        public void ImportarMap()
         {
             IImportExcel importar = new ImportExcel();
             importar.Import(ObtenerPath("Test.xlsx"));

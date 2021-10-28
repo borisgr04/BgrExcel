@@ -4,20 +4,20 @@ using System.Data;
 using System.IO;
 using System.Text;
 
-namespace Bgr.Base.Contracts
+namespace Bgr.Base.Excel.Contracts
 {
     public interface IImportExcel
     {
         Action<string> Log { get; set; }
 
-        void Import(string filePath, bool useHeaderRow = true);
-        void Import(byte[] book, bool useHeaderRow = true);
         void Import(Stream streamBook, bool useHeaderRow = true);
-        
+        void Import(byte[] book, bool useHeaderRow = true);
+        void Import(string filePath, bool useHeaderRow = true);
 
-        IList<T> GetSheet<T>(int sheetNumber);
+
         IList<T> GetSheet<T>(string sheetName);
-
+        IList<T> GetSheet<T>(int sheetNumber);
+        
         IList<T> Import<T>(byte[] book);
         IList<T> Import<T>(string filePath);
 

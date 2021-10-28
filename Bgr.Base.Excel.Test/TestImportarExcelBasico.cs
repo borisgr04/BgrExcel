@@ -1,4 +1,5 @@
 using Bgr.Base.Excel;
+using Bgr.Base.Excel.Contracts;
 using NUnit.Framework;
 
 namespace Tests

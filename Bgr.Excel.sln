@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bgr.Base.Contracts", "Bgr.Base.Contracts\Bgr.Base.Contracts.csproj", "{54088B91-BC2F-48C3-B350-F419ABB1ED42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bgr.Base.Excel.Contracts", "Bgr.Base.Contracts\Bgr.Base.Excel.Contracts.csproj", "{54088B91-BC2F-48C3-B350-F419ABB1ED42}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bgr.Base.Excel", "Bgr.Base.Excel\Bgr.Base.Excel.csproj", "{D8294076-0085-4883-8E6E-7A8654B6B044}"
 EndProject

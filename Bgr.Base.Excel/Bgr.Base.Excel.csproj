@@ -11,12 +11,12 @@
     <Copyright>ByA Systems</Copyright>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ClosedXML" Version="0.92.1" />
+    <PackageReference Include="ClosedXML" Version="0.95.4" />
     <PackageReference Include="ExcelDataReader" Version="3.6.0" />
     <PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="4.7.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bgr.Base.Contracts\Bgr.Base.Contracts.csproj" />
+    <ProjectReference Include="..\Bgr.Base.Contracts\Bgr.Base.Excel.Contracts.csproj" />
   </ItemGroup>
 </Project>

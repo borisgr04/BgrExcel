@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace Bgr.Base.Contracts
+namespace Bgr.Base.Excel.Contracts
 {
     public interface IExportExcel
     {

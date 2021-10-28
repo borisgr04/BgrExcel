@@ -1,4 +1,4 @@
-﻿using Bgr.Base.Contracts;
+﻿using Bgr.Base.Excel.Contracts;
 using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
